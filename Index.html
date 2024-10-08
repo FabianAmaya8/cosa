@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contenido.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <title>HGW</title>
 </head>
@@ -13,10 +14,10 @@
             <img src="img/logo.png" alt="logo">
         </div>
         <div class="buscardor">
-            <label for="buscador-tex">
-                <input type="text" placeholder="Buscador">
-                <input type="submit" value="Buscar">
-            </label>
+            <form>
+                <input class="buscador-tex" id="buscador" type="text" placeholder="Buscador">
+                <input class="buscador-btn" type="submit" value="Buscar">
+            </form>
         </div>
         <nav class="nav-general">
             <a class="nav-link nav-selec" href="#">Inicio</a>
@@ -31,6 +32,94 @@
             </a>
         </nav>
     </header>
+
+    <div class="contenido">
+        <div class="anuncios">
+            <div class="galeria">
+                <div class="galeria-img">
+                    <img src="img/hgw/galeria.jpg" alt="imagen de publisidad">
+                </div>
+            </div>
+            <div class="info-anucio">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus, omnis fugit quas ratione quaerat. Alias deserunt atque illo mollitia quam soluta culpa pariatur dolores, neque cupiditate eaque fugiat praesentium.
+                </p>
+            </div>
+        </div>
+        <div class="destacados">
+            <h2>Productos destacados</h2>
+            <div class="destacados-contenido">
+                <button>🢀</button>
+    
+                <div class="cart-producto">
+                    <a href="#">
+                        <div class="baner-productos">
+                            <div class="baner-img">
+                                <img src="img/hgw/producto.png" alt="producto">
+                            </div>
+                        </div>
+                        <div class="info-producto">
+                            <h3>Name producto</h3>
+                            <p>$76000</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="cart-producto">
+                    <a href="#">
+                        <div class="baner-productos">
+                            <div class="baner-img">
+                                <img src="img/hgw/producto.png" alt="producto">
+                            </div>
+                        </div>
+                        <div class="info-producto">
+                            <h3>Name producto</h3>
+                            <p>$76000</p>
+                        </div>
+                    </a>
+                </div>
+    
+                <button>🢂</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="informacion">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa nostrum dolor soluta reprehenderit eaque neque nam ea adipisci quo molestiae unde temporibus error accusamus amet iusto pariatur quia inventore.
+            </p>
+        </div>
+        <div class="footer-nav">
+            <h2>Navegador</h2>
+            <ul class="footer-ul">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Educacion</a></li>
+                <li><a href="#">Catalogo</a></li>
+                <li><a href="#">Personal</a></li>
+            </ul>
+        </div>
+        <div class="contacto">
+            <div class="contacto-item">
+                <p>Green World Colombia SAS</p>
+                
+                <p>Nit. 901270584</p>
+            </div>
+            <div class="contacto-item">
+                <p>Telefono: 3142921508</p>
+
+                <p>Direccion Calle 119 #14 42</p>
+            </div>
+            <div class="contacto-item">
+                <p>documentoscompensaciones@world-food.co</p>
+
+                <p>Copyright 2022 Todos los Derechos reserabados | HGW | Green World Colombia SAS</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

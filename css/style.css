@@ -3,6 +3,8 @@ body{
     color: #fff;
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    margin: 0;
 }
 
 header{
@@ -12,7 +14,7 @@ header{
     gap: 15px;
     width: 100%;
     height: 50px;
-    background-color: rgb(0, 123, 129);
+    background-color: #007b81;
     padding: 15px 0;
 }
 .logo{
@@ -24,9 +26,27 @@ header{
     height: 100%;
 }
 .buscardor{
+    flex: 1;
+}
+.buscardor form{
+    width: 100%;
+    height: 35px;
     display: flex;
     justify-content: center;
-    flex: 1;
+    gap: 10px;
+}
+.buscador-tex{
+    width: 70%;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+.buscador-btn{
+    width: 75px;
+    color: #fff;
+    background-color: #03624c;
+    border: none;
+    border-radius: 15px;
 }
 .nav-general{
     display: flex;
@@ -53,4 +73,48 @@ header{
 .personal img{
     width: 100%;
     height: 100%;
+}
+
+
+/*----- FOOTER -----*/
+footer{
+    background-color: #06302b;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.informacion p{
+    text-align: center;
+}
+.footer-nav{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-ul{
+    padding: 0;
+}
+.footer-ul li{
+    list-style: none;
+    margin: 15px;
+}
+.footer-ul a{
+    text-decoration: none;
+    color: #fff;
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacto-item{
+    text-align: center;
 }
