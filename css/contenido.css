@@ -1,13 +1,8 @@
-.conten-item{
-    padding-bottom: 5px;
-    border-bottom: #eeeeee88 solid 1px;
-}
 /*------ ANUNCIO ------*/
 .anuncios{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
-    margin: 0 30px;
 }
 .galeria{
     display: flex;
@@ -42,12 +37,16 @@
     border: none;
     border-radius: 10px;
 }
+.carts{
+    display: flex;
+    gap: 10px;
+}
 
 /*----- Carta de producto -----*/
 
 .cart-producto{
     width: 300px;
-    height: 400px;
+    height: 350px;
     border-radius: 50px;
     background: #007b81;
     box-shadow: -8px 8px 26px #00696e,8px -8px 26px #008d94;
@@ -80,9 +79,11 @@
 }
 .productos-container{
     width: 90%;
+
+}
+.productos-container > .carts{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     justify-items: center;
-    gap: 30px;
-    padding: 10px;
+    gap: 15px;
 }
