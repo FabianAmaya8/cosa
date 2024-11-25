@@ -9,7 +9,7 @@ const logoDivFooter = document.createElement('div');
 logoDivFooter.className = 'logo';
 
 const logoImgFooter = document.createElement('img');
-logoImgFooter.src = '../img/logo.png';
+logoImgFooter.src = '../../../../img/logo.png';
 logoImgFooter.alt = 'logo';
 logoDivFooter.appendChild(logoImgFooter);
 
@@ -31,10 +31,11 @@ footerUl.className = 'footer-ul';
 
 // Lista de enlaces del footer
 const footerLinks = [
-    { href: '../Index.html', text: 'Inicio' },
-    { href: '#', text: 'Educacion' },
-    { href: '#', text: 'Catalogo' },
-    { href: '../html/personal.html', text: 'Personal' }
+    { href: '../../../../Index.html', text: 'Inicio', file: 'Index.html' },
+    { href: '../../../../usuario/educacion/educacion.html', text: 'Educacion', file: 'educacion.html' },
+    { href: '../../../../usuario/catalogo/catalogo.html', text: 'Catalogo', file: 'catalogo.html' },
+    { href: '../../../../usuario/personal/personal.html', text: 'Personal', file: 'personal.html' },
+    { href: '../../../../usuario/carrito/carrito.html', text: 'Tu Carrito', file: 'carrito.html' }
 ];
 
 footerLinks.forEach(link => {

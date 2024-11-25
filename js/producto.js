@@ -52,7 +52,7 @@ function createProduct(name, price, imageUrl) {
   
       // Crear la cantidad de productos correspondiente
       for (let i = 0; i < productCount; i++) {
-        const product = createProduct('Name producto ' + (i + 1), '$76000', '../img/hgw/producto.png');
+        const product = createProduct('Name producto ' + (i + 1), '$76000', '../../../../img/hgw/producto.png');
         container.appendChild(product);
       }
     });
