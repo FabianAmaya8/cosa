@@ -52,20 +52,47 @@ links.forEach(link => {
   nav.appendChild(a);
 });
 
-// Imagen personal
-const personalLink = document.createElement('a');
-personalLink.href = '#';
+// Desplegable con detalles personales
+const desplegableDiv = document.createElement('div');
+desplegableDiv.className = 'desplegable';
 
-const personalDiv = document.createElement('div');
-personalDiv.className = 'personal';
+const details = document.createElement('details');
+details.className = 'contenedor-personal nav-link';
 
-const personalImg = document.createElement('img');
-personalImg.src = '../../../../img/personal.png';
-personalImg.alt = 'personal';
+const summary = document.createElement('summary');
+summary.className = 'personal';
 
-personalDiv.appendChild(personalImg);
-personalLink.appendChild(personalDiv);
-nav.appendChild(personalLink);
+const personalImgDiv = document.createElement('div');
+personalImgDiv.className = 'personal-img';
+
+const personalImg = document.createElement('i');
+personalImg.className = 'bx bxs-user-circle';
+
+personalImgDiv.appendChild(personalImg);
+summary.appendChild(personalImgDiv);
+details.appendChild(summary);
+
+// Lista desplegable
+const ul = document.createElement('ul');
+
+const opciones = [
+  { href: '#', text: 'Login' },
+  { href: '#', text: 'menbresias' },
+  { href: '#', text: 'Descargar APP' }
+];
+
+opciones.forEach(opcion => {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = opcion.href;
+  a.textContent = opcion.text;
+  li.appendChild(a);
+  ul.appendChild(li);
+});
+
+details.appendChild(ul);
+desplegableDiv.appendChild(details);
+nav.appendChild(desplegableDiv);
 
 // Añadir todo al header
 header.appendChild(logoDiv);

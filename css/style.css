@@ -83,8 +83,14 @@ header{
     background-color: #06302b;
 }
 .personal{
-    width: 50px;
     list-style: none;
+    height: 50px;
+}
+.personal-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 .desplegable{
     width: 105px;
@@ -93,6 +99,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.desplegable details[open]{
+    background-color: #007b81;
+    border: 1px solid #000;
+    transition: all 1s ease;
+    box-shadow: 0 0 5px #333;
+}
+.desplegable .nav-link{
+    padding: 5px;
 }
 .contenedor-personal{
     display: flex;
@@ -103,7 +118,6 @@ header{
 }
 .contenedor-personal ul{
     list-style: none;
-    background-color: #007b81ff;
     padding: 10px;
 }
 .contenedor-personal a{
@@ -111,9 +125,8 @@ header{
     text-transform: capitalize;
     color: #eee;
 }
-.personal img{
-    width: 100%;
-    height: 100%;
+.personal i{
+    font-size: 50px;
 }
 
 
