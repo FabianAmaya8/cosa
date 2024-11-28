@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/personal/pedidos.css">
+    <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>HGW</title>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="btn-header">
+        <label for="btn-header" class="btn-header">
+            <i class="bx bx-menu"></i>
+        </label>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../../../../img/logo.png" alt="logo">
+            </div>
+            <div class="buscardor">
+                <form>
+                    <input class="buscador-tex" id="buscador" type="text" placeholder="Buscador">
+                    <button class="buscador-btn" type="submit">
+                        <i class="bx bx-search"></i>
+                    </button>
+                </form>
+            </div>
+            <nav class="nav-general">
+                <a class="nav-link" href="../../../../Index.html" data-folder="">Inicio</a>
+
+                <a class="nav-link" href="../../../../usuario/educacion/educacion.html" data-folder="usuario/educacion">Educacion</a>
+
+                <a class="nav-link" href="../../../../usuario/catalogo/catalogo.html" data-folder="usuario/catalogo">Catalogo</a>
+                
+                <a class="nav-link nav-selec" href="../../../../usuario/personal/personal.html" data-folder="usuario/personal">Personal</a>
+                
+                <div class="cart">
+                    <a class="nav-link" href="../../../../usuario/carrito/carrito.html" data-folder="usuario/carrito">
+                        <i class="bx bx-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+                <div class="desplegable">
+                    <details class="contenedor-personal nav-link">
+                        <summary class="personal">
+                            <div class="personal-img">
+                                <i class="bx bxs-user-circle"></i>
+                            </div>
+                        </summary>
+                        <ul>
+                            <li>
+                                <a href="#">Login</a>
+                            </li>
+                            <li>
+                                <a href="../../../../usuario/personal/info-personal.html">informacion personal</a>
+                            </li>
+                            <li>
+                                <a href="#">menbresias</a>
+                            </li>
+                            <li>
+                                <a href="#">Descargar APP</a>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="../../../../img/logo.png" alt="logo">
+            <span>HGW</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#Inicio">Inicio</a>
+            <a href="#Catalogo">Catalogo</a>
+            <a href="#Educacion">Educacion</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="#search" class="icon">
+                <i class="bx bx-search"></i>
+            </a>
+            <a href="#profile" class="icon">
+                <i class="bx bx-user"></i>
+            </a>
+            <div class="cart">
+                <a href="#cart" class="cart-btn">
+                    <i class="bx bx-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenido">
+    </main>
+
+    <script src="../../js/personal/niveles.js"></script>
+</body>
+</html>
