@@ -13,36 +13,49 @@ body{
     z-index: 100;
 }
 .conten-item{
-    padding-bottom: 15px;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 15px;
     border-bottom: #eeeeee88 solid 1px;
 }
+.conten-item:last-child{
+    padding: 0;
+    border-bottom: none;
+}
 /*-------- HEADER ---------*/
+#btn-header{
+    display: none;
+}
+.btn-header{
+    font-size: 50px;
+    cursor: pointer;
+    display: none;
+}
 header{
-    display: flex;
+    width: 100%;
     position: sticky;
     top: 0;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-    height: 50px;
-    background-color: #007b81;
-    padding: 15px 0;
     z-index: 100;
+    background-color: #007b81;
+}
+.header-content{
+    display: grid;
+    grid-template-columns: 1fr 3fr 5fr;
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+    padding: 15px 0;
 }
 .logo{
-    width: 50px;
-    margin-left: 15px;
+    width: 50px;;
 }
 .logo img{
     width: 100%;
     height: 100%;
 }
 .buscardor{
-    flex: 1;
+    width: 100%;
 }
 .buscardor form{
     width: 100%;
@@ -58,7 +71,9 @@ header{
     padding: 10px;
 }
 .buscador-btn{
-    width: 75px;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
     color: #fff;
     background-color: #03624c;
     border: none;
@@ -66,12 +81,14 @@ header{
 }
 .nav-general{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    flex: 2;
+    gap: 15px;
+    width: 100%;
 }
 .nav-link{
     text-decoration: none;
+    text-align: center;
     color: #fff;
     background-color: #03624c;
     padding: 10px;
@@ -94,7 +111,7 @@ header{
     justify-content: center;
 }
 .desplegable{
-    width: 105px;
+    width: 115px;
     height: 50px;
     position: relative;
     display: flex;
@@ -119,7 +136,15 @@ header{
 }
 .contenedor-personal ul{
     list-style: none;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-personal li{
+    padding: 5px 0;
+    border-bottom: #eeeeee88 solid 1px;
+}
+.contenedor-personal li:last-child{
+    border-bottom: none;
 }
 .contenedor-personal a{
     text-decoration: none;
@@ -134,31 +159,39 @@ header{
 /*----- FOOTER -----*/
 footer{
     background-color: #06302b;
+}
+.footer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 15px;
+    margin: 15px;
 }
 .informacion{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    gap: 5px;
 }
 .informacion p{
     text-align: center;
 }
 .footer-nav{
-    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 10px;
 }
 .footer-ul{
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .footer-ul li{
     list-style: none;
-    margin: 15px;
 }
 .footer-ul a{
     text-decoration: none;
@@ -207,3 +240,31 @@ footer{
 /*----- media query -----*/
 
 @media (max-width: 768px){
+    .btn-header{
+        display: block;
+    }
+    .header-content {
+        display: none;
+    }
+    #btn-header:checked ~ .header-content{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: 100vh;
+    }
+    .header-content .logo{
+        width: 150px;
+    }
+    .nav-general{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+    }
+    .informacion,.footer-nav{
+        padding-bottom: 15px;
+        border-bottom: #eeeeee88 solid 1px;
+    }
+}

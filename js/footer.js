@@ -1,5 +1,8 @@
 // Crear elementos del footer
 const footer = document.createElement('footer');
+const footerDiv = document.createElement('div');
+footerDiv.className = 'footer';
+
 
 // Información de la empresa
 const informacionDiv = document.createElement('div');
@@ -75,9 +78,10 @@ contactoItems.forEach(item => {
 });
 
 // Añadir todo al footer
-footer.appendChild(informacionDiv);
-footer.appendChild(footerNav);
-footer.appendChild(contactoDiv);
+footerDiv.appendChild(informacionDiv);
+footerDiv.appendChild(footerNav);
+footerDiv.appendChild(contactoDiv);
 
 // Agregar el footer al cuerpo del documento
+footer.appendChild(footerDiv);
 document.body.appendChild(footer);

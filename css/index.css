@@ -1,5 +1,6 @@
 /*------ ANUNCIO ------*/
 .anuncios{
+    width: 90%;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
@@ -11,7 +12,7 @@
     justify-content: center;
 }
 .galeria-img{
-    width: 500px;
+    max-width: 500px;
 }
 .galeria img{
     width: 100%;
@@ -34,7 +35,8 @@
     gap: 15px;
 }
 .destacados-contenido button{
-    height: 50px;
+    height: 40px;
+    font-size: 40px;
     border: none;
     border-radius: 10px;
 }
@@ -62,4 +64,11 @@
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     justify-items: center;
     gap: 30px;
+}
+
+/*----- media query -----*/
+@media (max-width: 768px){
+    .anuncios{
+        grid-template-columns: 1fr;
+    }
 }

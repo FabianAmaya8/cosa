@@ -1,0 +1,31 @@
+.pedidos{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.pedidos button{
+    font-size: 1em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #03624c;
+    color: #fff;
+    transition: background-color 0.5s ease;
+    text-transform: capitalize;
+}
+.pedidos button:hover{
+    background-color: #06302b;
+    font-weight: bolder;
+}
+.pedidos .volver button{
+    display: flex;
+    gap: 5px;
+}
+.secciones{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}

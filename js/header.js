@@ -1,6 +1,7 @@
 // Crear elementos del header
-const header = document.createElement('header');
-
+const headerPrincipal = document.createElement('header');
+const headerDiv = document.createElement('div');
+headerDiv.className= 'header-content';
 // Logo
 const logoDiv = document.createElement('div');
 logoDiv.className = 'logo';
@@ -22,10 +23,14 @@ inputText.id = 'buscador';
 inputText.type = 'text';
 inputText.placeholder = 'Buscador';
 
-const inputSubmit = document.createElement('input');
+const lupita = document.createElement('i');
+lupita.className = 'bx bx-search';
+
+const inputSubmit = document.createElement('button');
 inputSubmit.className = 'buscador-btn';
 inputSubmit.type = 'submit';
-inputSubmit.value = 'Buscar';
+
+inputSubmit.appendChild(lupita)
 
 form.appendChild(inputText);
 form.appendChild(inputSubmit);
@@ -77,6 +82,7 @@ const ul = document.createElement('ul');
 
 const opciones = [
   { href: '#', text: 'Login' },
+  { href: '../../../../usuario/personal/info-personal.html', text: 'informacion personal' },
   { href: '#', text: 'menbresias' },
   { href: '#', text: 'Descargar APP' }
 ];
@@ -94,13 +100,34 @@ details.appendChild(ul);
 desplegableDiv.appendChild(details);
 nav.appendChild(desplegableDiv);
 
+// Añadir desplegable al header
+const checkbox = document.createElement('input');
+checkbox.type = 'checkbox';
+checkbox.id = 'btn-header';
+
+// Crear el label
+const label = document.createElement('label');
+label.htmlFor = 'btn-header';
+label.className = 'btn-header';
+
+// Crear el ícono dentro del label
+const icon = document.createElement('i');
+icon.className = 'bx bx-menu';
+
+label.appendChild(icon);
+
+// Añadir elementos al header
+headerPrincipal.appendChild(checkbox);
+headerPrincipal.appendChild(label);
+
 // Añadir todo al header
-header.appendChild(logoDiv);
-header.appendChild(buscadorDiv);
-header.appendChild(nav);
+headerDiv.appendChild(logoDiv);
+headerDiv.appendChild(buscadorDiv);
+headerDiv.appendChild(nav);
 
 // Agregar el header al cuerpo del documento
-document.body.appendChild(header);
+headerPrincipal.appendChild(headerDiv);
+document.body.appendChild(headerPrincipal);
 
 // Detectar la carpeta actual usando la ruta completa del directorio
 const currentPath = window.location.pathname;
