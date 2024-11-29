@@ -1,5 +1,5 @@
 // Función para crear un solo producto
-function createProduct(name, price, imageUrl) {
+function createProduct(categotia, name, price, imageUrl) {
     const cartProducto = document.createElement('div');
     cartProducto.className = 'cart-producto';
   
@@ -22,14 +22,26 @@ function createProduct(name, price, imageUrl) {
     const infoProductoDiv = document.createElement('div');
     infoProductoDiv.className = 'info-producto';
   
+    const productCategoria = document.createElement('p');
+    productCategoria.textContent = categotia;
+    productCategoria.className = 'categoria';
+
     const productName = document.createElement('h3');
     productName.textContent = name;
+    productName.className = 'nombre';
   
     const productPrice = document.createElement('p');
     productPrice.textContent = price;
+    productPrice.className = 'precio';
+
+    const productCarrito = document.createElement('button');
+    productCarrito.textContent = "Agregar al carrito";
+    productCarrito.className = 'btn-carrito';
   
+    infoProductoDiv.appendChild(productCategoria);
     infoProductoDiv.appendChild(productName);
     infoProductoDiv.appendChild(productPrice);
+    infoProductoDiv.appendChild(productCarrito);
   
     productLink.appendChild(bannerProductosDiv);
     productLink.appendChild(infoProductoDiv);
@@ -52,7 +64,7 @@ function createProduct(name, price, imageUrl) {
   
       // Crear la cantidad de productos correspondiente
       for (let i = 0; i < productCount; i++) {
-        const product = createProduct('Name producto ' + (i + 1), '$76000', '../../../../img/hgw/producto.png');
+        const product = createProduct('Categoría', 'Name producto ' + (i + 1), '$76000', '../../../../img/hgw/producto.png');
         container.appendChild(product);
       }
     });

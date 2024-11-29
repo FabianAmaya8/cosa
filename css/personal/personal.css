@@ -119,7 +119,7 @@
 }
 .boton-item a{
     text-decoration: none;
-    color: #eee;
+    color: #333;
 }
 .boton-item .a-content{
     display: flex;
@@ -147,7 +147,7 @@
 }
 .dato a{
     text-decoration: none;
-    color: #eee;
+    color: #333;
 }
 .dato-item{
     display: flex;
@@ -176,7 +176,7 @@
 }
 .ayuda-item a{
     text-decoration: none;
-    color: #eee;
+    color: #333;
 }
 .ayuda-item .a-content{
     display: flex;

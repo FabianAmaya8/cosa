@@ -34,7 +34,7 @@
     margin: 15px;
     gap: 15px;
 }
-.destacados-contenido button{
+.destacados-contenido > button{
     height: 40px;
     font-size: 40px;
     border: none;
