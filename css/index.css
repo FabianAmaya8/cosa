@@ -30,8 +30,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: 15px;
+    width: 100%;
+    margin: 15px 0;
     gap: 15px;
 }
 .destacados-contenido > button{

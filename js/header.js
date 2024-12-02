@@ -48,21 +48,38 @@ const links = [
   { href: '../../../../usuario/carrito/carrito.html', text: 'Tu Carrito', folder: 'usuario/carrito' }
 ];
 
+// Reemplazar "Tu Carrito" con el ícono y contador dinámico
 links.forEach(link => {
   const a = document.createElement('a');
   a.className = 'nav-link';
   a.href = link.href;
-  a.textContent = link.text;
-  a.dataset.folder = link.folder; // Guardar el nombre de la carpeta (incluyendo subcarpetas) en un atributo data
+  a.dataset.folder = link.folder;
+  
+  if (link.text === 'Tu Carrito') {
+    const icon = document.createElement('i');
+    icon.className = 'bx bx-cart';
+    
+    const span = document.createElement('span');
+    span.className = 'cart-count';
+    const cartItemCount = Math.floor(Math.random() * 10);
+    span.textContent = cartItemCount;
+
+    a.appendChild(icon);
+    a.appendChild(span);
+  } else {
+    a.textContent = link.text;
+  }
+
   nav.appendChild(a);
 });
+
 
 // Desplegable con detalles personales
 const desplegableDiv = document.createElement('div');
 desplegableDiv.className = 'desplegable';
 
 const details = document.createElement('details');
-details.className = 'contenedor-personal nav-link';
+details.className = 'contenedor-personal';
 
 const summary = document.createElement('summary');
 summary.className = 'personal';
@@ -116,9 +133,13 @@ icon.className = 'bx bx-menu';
 
 label.appendChild(icon);
 
+const titulo = document.createElement('h2');
+titulo.textContent = 'HGW';
+
 // Añadir elementos al header
 headerPrincipal.appendChild(checkbox);
 headerPrincipal.appendChild(label);
+headerPrincipal.appendChild(titulo);
 
 // Añadir todo al header
 headerDiv.appendChild(logoDiv);

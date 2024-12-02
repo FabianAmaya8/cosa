@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 :root{
     --fondo : radial-gradient(circle, rgba(122, 189, 135, 1) 0%, rgba(202, 222, 200, 1) 44%, rgba(232, 251, 237, 1) 100%);
@@ -23,7 +24,9 @@ body{
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
-    border-bottom: #eeeeee88 solid 1px;
+    border-bottom: #33333388 solid 1px;
+}.conten-item > div{
+    width: 90%;
 }
 .conten-item:last-child{
     padding: 0;
@@ -40,6 +43,7 @@ body{
 }
 header{
     width: 95%;
+    overflow: visible;
     position: sticky;
     border-radius: 15px;
         top: 10px;
@@ -49,17 +53,22 @@ header{
     background: var(--header);
     backdrop-filter: blur(10px);
 }
+header h2{
+    display: none;
+    text-align: center;
+}
 .header-content{
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 15px;
     padding: 15px 0;
+    grid-column: span 3;
 }
 .logo, .logo img{
     width: 50px;
 }
-
 .buscardor{
     width: 100%;
 }
@@ -96,58 +105,66 @@ header{
     text-decoration: none;
     text-align: center;
     color: #fff;
-    background-color: #03624c;
-    padding: 10px;
-    border-radius: 15px;
+    border-bottom: 2px solid #03624c;
+    padding-bottom: 10px;
 }
 .nav-selec{
-    background-color: #2cc295;
+    border-bottom: 2px solid #2cc295;
 }
 .nav-link:hover{
-    background-color: #06302b;
+    border-bottom: 2px solid #06302b;
 }
 .personal{
     list-style: none;
-    height: 50px;
-}
-.personal-img{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
 }
 .desplegable{
-    width: 115px;
-    height: 50px;
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    min-width: 93px;
+    height: 53px;
 }
-.desplegable details[open]{
-    background-color: #007b81;
-    border: 1px solid #000;
-    transition: all 1s ease;
-    box-shadow: 0 0 5px #333;
+.desplegable{
+    padding: 0;
 }
-.desplegable .nav-link{
+.contenedor-personal[open]{
+    background: var(--fondo);
+    border-radius: 10px;
     padding: 5px;
+    box-shadow: 0 0 5px #333;
+    border: none;
+    z-index: 100;
+    color: #333;
+    transition-duration: 2s;
 }
 .contenedor-personal{
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 0;
+    text-align: center;
+    color: #fff;
+    transition: all 1s ease;
 }
 .contenedor-personal ul{
+    top: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
 }
+.contenedor-personal summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 .contenedor-personal li{
     padding: 5px 0;
-    border-bottom: #eeeeee88 solid 1px;
+    border-bottom: #33333388 solid 1px;
 }
 .contenedor-personal li:last-child{
     border-bottom: none;
@@ -155,7 +172,8 @@ header{
 .contenedor-personal a{
     text-decoration: none;
     text-transform: capitalize;
-    color: #eee;
+    color: #333;
+
 }
 .personal i{
     font-size: 50px;
@@ -219,11 +237,17 @@ footer{
     background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
-    width: 250px;
+    width: 200px;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.5s ease;
+}
+.cart-producto:hover{
+    transform: translateY(-10px);
+}
+.cart-producto:hover img{
+    transform: scale(1.2);
 }
 .cart-producto a{
     text-decoration: none;
@@ -236,15 +260,12 @@ footer{
     width: 95%;
 }
 .baner-img{
-    border-bottom: 2px solid #ffffff4c;
+    border-bottom: 2px solid #0000004c;
 }
 .baner-img img{
     width: 100%;
     height: 100%;
-}
-.info-producto{
-    width: 95%;
-    margin-top: 10px;
+    transition: transform 1s ease;
 }
 .categoria {
     font-size: 12px;
@@ -281,13 +302,18 @@ footer{
 @media (max-width: 768px){
     header{
         width: 100%;
-        position: sticky;
             top: 0;
             left: 0;
             right: 0;
         border-radius: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
     }
     .btn-header{
+        display: block;
+    }
+    header h2{
         display: block;
     }
     .header-content {
@@ -301,7 +327,9 @@ footer{
         height: 100vh;
     }
     .header-content .logo{
-        width: 150px;
+        width: 350px;
+        margin: auto;
+        order: 1;
     }
     .logo img{
         width: 100%;
@@ -318,5 +346,8 @@ footer{
     .informacion,.footer-nav{
         padding-bottom: 15px;
         border-bottom: #eeeeee88 solid 1px;
+    }
+    .conten-item > div{
+        width: 100%;
     }
 }
