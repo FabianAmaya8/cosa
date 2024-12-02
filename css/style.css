@@ -61,7 +61,7 @@ header{
     position: sticky;
     border-radius: 15px;
         top: 10px;
-        left: 20px;
+        left: 40px;
         right: 20px;
     z-index: 100;
     background: var(--header);
@@ -80,8 +80,9 @@ header h2{
     padding: 15px 0;
     grid-column: span 3;
 }
-.logo, .logo img{
+.logo img {
     width: 50px;
+    margin-left: 30px;
 }
 .buscardor{
     width: 100%;
