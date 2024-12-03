@@ -26,6 +26,7 @@ body{
     gap: 15px;
     margin: 0;
     z-index: 100;
+    scroll-behavior: smooth;
 }
 .conten-item{
     width: 100%;
@@ -80,9 +81,8 @@ header h2{
     padding: 15px 0;
     grid-column: span 3;
 }
-.logo img {
+.logo,.logo img {
     width: 50px;
-    margin-left: 30px;
 }
 .buscardor{
     width: 100%;

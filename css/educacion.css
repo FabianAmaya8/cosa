@@ -12,25 +12,20 @@ body {
     
 }
 .banner{
-    margin: 50px;
+    margin: 5px;
     background: url(/img/educacion/fondocircle.png);
     background-size: cover;
     height: 80%;
     width: 80%;
-    transform: translateX(150px);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-radius: 30px;
 }
 .circle {
-    transform: translateX(350px);
     position: relative;
     width: 400px;
     height: 400px;
     border-radius: 50%;
     background-color: white;
-    margin: 50px auto;
+    margin: 50px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -123,7 +118,7 @@ section{
 .sec1{
     padding: 20px;
     margin: 50px auto;
-    max-width: 1200px;
+    width: 100%;
     background-color:#f6c23e;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -131,7 +126,7 @@ section{
 .sec2{
     padding: 20px;
     margin: 50px auto;
-    max-width: 1200px;
+    width: 100%;
     background-color:#1cc88a;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -139,7 +134,7 @@ section{
 .sec3{
     padding: 20px;
     margin: 50px auto;
-    max-width: 1200px;
+    width: 100%;
     background-color:#36b9cc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -147,7 +142,7 @@ section{
 .sec4{
     padding: 20px;
     margin: 50px auto;
-    max-width: 1200px;
+    width: 100%;
     background-color:#e56a54;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -175,6 +170,7 @@ section{
 #liderazgo,
 #productos,
 #proceso {
+    width: 90%;
     opacity: 0;
     animation: slideIn 1s ease-out forwards;
 }
